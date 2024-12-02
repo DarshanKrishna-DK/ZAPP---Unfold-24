@@ -1,109 +1,80 @@
-#root {
-  max-width: 1280px;
+.app {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 1rem;
-  text-align: center;
+  padding: 20px;
 }
 
-.logo {
-  height: 2em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-.logo.agoric:hover {
-  filter: drop-shadow(0 0 2em #fa4a49aa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 1em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.piece {
-  width: 6em;
-  border-radius: 10%;
-}
-
-.coin {
-  width: 2em;
-  margin: 10px;
-}
-
-.trade {
+.app-header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background: #171717;
-  border-radius: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.item-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 15px 25px 15px;
-  margin: 5px;
+.app-title {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.row-center {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-input {
+.connect-wallet {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
   border: none;
-  background: #242424;
-  text-align: center;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-size: 1.2rem;
-  width: 75px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@media (prefers-color-scheme: light) {
-  .trade {
-    background: #fafafa;
-    border: 1px solid #e5e5e5;
-  }
-  input {
-    background: #e5e5e5;
-  }
+.chat-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
-.error {
-  background-color: #E11D48;
-  color: #fff;
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
 }
 
-/* increment/decrement arrows always visible */
-input[type=number]::-webkit-inner-spin-button {
-  opacity: 1
+.chat-message {
+  margin: 5px 0;
+}
+
+.user-message {
+  background-color: #d1e7dd;
+  padding: 10px;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
+.bot-message {
+  background-color: #f8d7da;
+  padding: 10px;
+  border-radius: 5px;
+  align-self: flex-start;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-container button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
